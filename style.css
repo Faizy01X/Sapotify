@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --a: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+
+/* Main Container  */
+.container {
+    display: flex;
+}
+
+/* Left Side  */
+.left {
+    /* border: 2px solid blue; */
+    border-radius: 8px;
+    width: 25vw;
+    border-radius: 2px;
+    margin: 3px;
+}
+
+/* Left Home Box  */
+.home {
+    background-color: #121212;
+    /* border: 2px solid aliceblue; */
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.home ul li {
+    list-style: none;
+    display: flex;
+    width: 14px;
+    gap: 15px;
+    padding-top: 14px;
+    font-weight: bold;
+}
+
+/* Left Library Box  */
+.library {
+    /* border: 2px solid purple; */
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+    min-height: 80vh;
+    position: relative;
+
+}
+
+.heading {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+    align-items: center;
+}
+
+/* SONG LIST IN THE LIBRARY  */
+.songList {
+    padding: 0 12px;
+    height: 544px;
+    overflow: auto;
+    margin-bottom: 35px;
+}
+
+.songList ul li {
+    list-style-type: decimal;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    padding: 13px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 12px 0;
+}
+
+.songList .info {
+    width: 344px;
+    font-size: 13px;
+}
+
+/* Play Now */
+.playNow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    width: 125px;
+    gap: 4px;
+}
+
+.playNow span {
+    font-size: 15px;
+
+}
+
+
+/* Links in Footer  */
+.footer {
+    display: flex;
+
+    /* width: 100px; */
+    /* margin: 5px; */
+    /* padding: 10px; */
+}
+
+.footer ul {
+    bottom: 2px;
+    position: absolute;
+    gap: 5px;
+    font-size: 10px;
+    display: flex;
+}
+
+.footer a {
+    color: grey;
+    text-decoration: none;
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+
+/* Right Side  */
+.right {
+    /* border: 2px solid red; */
+    width: 75vw;
+    /* background-color: #121212; */
+    border-radius: 8px;
+    margin: 8px 3px;
+    padding: 5px;
+    position: relative;
+
+}
+
+/* Header in Right  */
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34, 34, 34);
+}
+
+.header>* {
+    padding: 20px;
+}
+
+.hamburgerContainer {
+    display: flex;
+}
+
+.hamburger {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+/* Login SinUp Button in Header  */
+.signBtn {
+    background-color: #242424;
+    color: rgb(156 148 148);
+    border: none;
+    margin: 0 12px;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+
+
+}
+
+.signBtn:hover {
+    /* font-size: 17px; */
+    color: aliceblue;
+    transform: scale(1.03);
+}
+
+.loginBtn {
+    padding: 10px 20px;
+    /* margin: 0 3px; */
+    outline: none;
+    border: none;
+    border-radius: 21px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.loginBtn:hover {
+    font-weight: bold;
+    /* font-size: 17px; */
+    /* padding: 10px 19px; */
+    transform: scale(1.03);
+}
+
+/* Spotify Playlist Section in Right  */
+.spotifyPlaylist {
+    padding: 16px;
+
+
+}
+
+.spotifyPlaylist h1 {
+    padding: 16px 0;
+
+
+}
+
+.cardContainer {
+
+    max-height: 60vh;
+    overflow-y: auto;
+    display: flex;
+    /* justify-content: center; */
+    margin: 30px;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    /* border: 2px solid palevioletred; */
+    position: relative;
+    border-radius: 7px;
+    width: 200px;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #252525;
+    transition: all 0.4s;
+}
+
+.card:hover {
+    background-color: rgb(72, 69, 69);
+    cursor: pointer;
+    --a: 1;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+
+}
+
+.play {
+    /* border: 2px solid blue; */
+    height: 35px;
+    
+    position: absolute;
+    bottom: 66px;
+    left: 173px;
+    opacity: var(--a );
+    transition: all 1s ease-out;
+}
+
+.playbar {
+    position: fixed;
+    bottom: 8px;
+    border-radius: 8px;
+    background-color: #121312;
+    width: 70vw;
+    max-height: 100px;
+    padding: 10px;
+    margin: 5px;
+
+
+}
+
+.songContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+/* Seekbar  */
+.seekBar {
+    width: 99%;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 15px 5px;
+    cursor: pointer;
+
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    left: 0%;
+    bottom: 3.5px;
+
+    transition: left 0.5s;
+}
+
+.songButtons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.songButtons img {
+    cursor: pointer;
+}
+
+/* //Volume  */
+.volControl {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* bottom: 25px; */
+}
+
+.volume {
+    display: flex;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.volume input {
+    filter: invert(1);
+    cursor: pointer;
+    width: 50px;
+    height: 4px;
+
+}
+
+
+
+
+/* Scroll Bar  */
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #4A5568 #1A202C;
+    /* thumb color, track color */
+}
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1A202C;
+    /* Dark track background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4A5568;
+    /* Dark grey thumb */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+    /* Lighter grey on hover */
+}
+
+
+
+
+
+
+
+
+/* // RESPONSIVE WEBSITE CODE HERE  */
+
+@media (max-width: 1200px) {
+
+    .left {
+        position: absolute;
+        background-color: black;
+        left: -120%;
+        transition: all 0.3s;
+        z-index: 1;
+        width: 290px;
+        padding: 0;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+
+
+    }
+
+    .left .close {
+        display: block;
+        position: absolute;
+        right: 22px;
+        top: 18px;
+    }
+
+
+    .right {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .playNow>span {
+        font-size: small;
+    }
+
+    .playbar {
+        width: 88vw;
+
+    }
+
+    .seekBar {
+        width: calc(100vw-70px);
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .cardContainer {
+        margin: 4px;
+        justify-content: center;
+
+    }
+
+    .card {
+        width: 30vw;
+        font-size: 0.6rem;
+    }
+
+    .play {
+        bottom: 45px;
+        left: 125px;
+        /* opacity: 5; */
+    }
+
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 80%;
+        justify-content: center;
+        /* margin: 0;    */
+        /* padding: 0; */
+    }
+
+    .left {
+        background-color: black;
+        position: absolute;
+        left: -120%;
+        transition: all 0.3s;
+        z-index: 1;
+        width: 290px;
+        padding: 0;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+    }
+
+    .header>* {
+        padding: 2px;
+    }
+
+    .buttons>* {
+        margin: 0 6px;
+    }
+
+    .header {
+        padding: 7px;
+    }
+
+    .spotifyPlaylists h1 {
+        padding: 4px;
+    }
+
+    .library {
+        height: 82vh;
+    }
+
+    .left {
+        width: 100vw;
+    }
+
+    .play img {
+        top: 700px;
+        left: 100px;
+
+    }
+
+
+
+    .play {
+        bottom: 47px;
+        left: 220px;
+        /* opacity: 5; */
+    }
+}
